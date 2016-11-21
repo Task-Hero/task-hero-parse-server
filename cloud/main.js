@@ -28,5 +28,4 @@ Parse.Cloud.define("sendPushToUser", function(request, response) {
 
   response.success('success');
 
-});success('success');
 });
