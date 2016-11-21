@@ -4,12 +4,11 @@ Parse.Cloud.define('hello', function(req, res) {
 
 Parse.Cloud.define("sendPushToUser", function(request, response) {
 
-  var params = request.params;
-  var someKey = params.someKey;
-  var data = params.data;
+  var user = request.params.user;
+  var data = request.params.data;
 
   var recipientUser = new Parse.User();
-  recipientUser.id = someKey;
+  recipientUser.id = user;
 
   var pushQuery = new Parse.Query(Parse.Installation);
   pushQuery.equalTo("user", recipientUser);
@@ -28,4 +27,6 @@ Parse.Cloud.define("sendPushToUser", function(request, response) {
   });
 
   response.success('success');
+
+});success('success');
 });
