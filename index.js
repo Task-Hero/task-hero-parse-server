@@ -22,11 +22,18 @@ var api = new ParseServer({
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   },
   push: {
-    ios: {
-      pfx: 'certs/Certificates.p12',
-      bundleId: 'com.taskheroapp.ios',
-      production: false
-    }
+    ios: [
+      {
+        pfx: 'certs/Certificates.p12',
+        bundleId: 'com.taskheroapp.ios',
+        production: false
+      },
+      {
+        pfx: 'certs/taskHeroProd.p12',
+        bundleId: 'com.taskheroapp.ios',
+        production: true
+      }
+    ]
   }
 });
 
