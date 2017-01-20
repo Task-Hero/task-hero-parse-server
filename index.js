@@ -18,6 +18,7 @@ var api = new ParseServer({
   clientKey: 'sanDiego',
   masterKey: process.env.MASTER_KEY || 'goChargers', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'https://salty-plains-70360.herokuapp.com/parse',  // Don't forget to change to https if needed
+  publicServerURL: 'https://salty-plains-70360.herokuapp.com/parse',
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   },
